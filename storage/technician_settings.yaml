@@ -2,35 +2,30 @@ DR:
   active: true
   branch: New Mexico
   commission_rate: 30.0
-  full_name: Daniel Rogers
-  initials: DR
+  full_name: John Doe
+  initials: DJ
 GV:
   active: true
   branch: New Mexico
   commission_rate: 28.0
-  full_name: George Valenzuela
-  initials: GV
+  full_name: Taylor Swift
+  initials: TS
 MB:
   active: true
   branch: New Mexico
   commission_rate: 28.0
-  full_name: 'Matthew Bercovitch '
-  initials: MB
+  full_name: 'Johnny Appleseed '
+  initials: JA
 MG:
   active: true
   branch: New Mexico
   commission_rate: 30.0
-  full_name: Mateo Grant
-  initials: MG
+  full_name: Tech 4
+  initials: T4
 MP:
   active: true
   branch: New Mexico
   commission_rate: 32.0
-  full_name: Mark Garcia
-  initials: MP
-PE:
-  active: true
-  branch: New Mexico
-  commission_rate: 33.0
-  full_name: Parker Edwards
-  initials: PE
+  full_name: Jane Doe
+  initials: JD
+
