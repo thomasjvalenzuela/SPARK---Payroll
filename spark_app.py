@@ -1,8 +1,29 @@
 """
 SPARK - Service Payroll Automation & Reporting Kit
-Sarah's Appliance Repair
+John Doe Appliance Repair
 """
+import streamlit as st
 
+def require_password():
+    # If already authenticated, do nothing
+    if st.session_state.get("authenticated"):
+        return True
+
+    st.title("SPARK")
+    st.caption("Password required")
+
+    pw = st.text_input("Password", type="password")
+
+    if st.button("Sign in"):
+        if pw == st.secrets.get("APP_PASSWORD"):
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password.")
+
+    st.stop()
+
+require_password()
 import streamlit as st
 import pandas as pd
 import yaml
