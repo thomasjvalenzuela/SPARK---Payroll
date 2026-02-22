@@ -63,7 +63,7 @@ ASSETS_DIR = Path("assets")
 OUTPUT_DIR = STORAGE_DIR / "output"
 SETTINGS_FILE = STORAGE_DIR / "technician_settings.yaml"
 LOGO_PATH = ASSETS_DIR / "appliancelogodefault.png"
-LOGO_URL = ""
+LOGO_URL = "https://sparkpay.streamlit.app/SPARK---Payroll/blob/main/assets/appliancelogodefault"
 
 COLORS = {
     'primary': '#11A4E4',
