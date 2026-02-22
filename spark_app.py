@@ -22,7 +22,9 @@ def require_password():
             st.error("Incorrect password.")
 
     st.stop()
-
+if st.sidebar.button("Log out"):
+    st.session_state["authenticated"] = False
+    st.rerun()
 require_password()
 import streamlit as st
 import pandas as pd
