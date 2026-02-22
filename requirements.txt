@@ -1,6 +1,5 @@
 streamlit
 pandas
+reportlab
 PyYAML
 requests
-fpdf2
-reportlab
