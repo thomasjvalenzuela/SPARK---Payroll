@@ -14,12 +14,6 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import zipfile
 import io
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, Image
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_CENTER, TA_RIGHT, TA_LEFT
 import requests
 
 def _extract_text_and_delimiter(uploaded_file) -> tuple[str, str]:
