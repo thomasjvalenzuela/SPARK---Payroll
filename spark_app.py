@@ -62,8 +62,8 @@ STORAGE_DIR = Path("storage")
 ASSETS_DIR = Path("assets")
 OUTPUT_DIR = STORAGE_DIR / "output"
 SETTINGS_FILE = STORAGE_DIR / "technician_settings.yaml"
-LOGO_PATH = ASSETS_DIR / "sarahs_logo.png"
-LOGO_URL = "https://appliancerepairidaho.com/wp-content/uploads/2025/01/Final-Sarahs-logo-2.png"
+LOGO_PATH = ASSETS_DIR / "appliancelogodefault.png"
+LOGO_URL = ""
 
 COLORS = {
     'primary': '#11A4E4',
