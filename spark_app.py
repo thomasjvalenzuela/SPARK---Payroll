@@ -15,6 +15,7 @@ from pathlib import Path
 import zipfile
 import io
 import requests
+from fpdf import FPDF
 
 def _extract_text_and_delimiter(uploaded_file) -> tuple[str, str]:
     """Read uploaded file bytes once, decode w/ BOM handling, and detect delimiter."""
