@@ -58,13 +58,32 @@ except Exception:
 # -------------------------
 # Paths & Branding
 # -------------------------
-STORAGE_DIR = Path("storage")
-ASSETS_DIR = Path("assets")
-OUTPUT_DIR = STORAGE_DIR / "output"
-SETTINGS_FILE = STORAGE_DIR / "technician_settings.yaml"
-LOGO_PATH = ASSETS_DIR / "appliancelogodefault.png"
-LOGO_URL = "https://sparkpay.streamlit.app/SPARK---Payroll/blob/main/assets/appliancelogodefault"
+from pathlib import Path
+import streamlit as st
 
+BASE_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = BASE_DIR / "assets"
+LOGO_PATH = ASSETS_DIR / "appliancelogodefault.png"
+LOGO_URL = ""  # optional
+
+def render_logo():
+    # Prefer local file if it exists and is a real file
+    if LOGO_PATH.exists() and LOGO_PATH.is_file():
+        try:
+            st.image(str(LOGO_PATH), width=200)
+            return
+        except Exception as e:
+            st.warning(f"Logo file exists but couldn't be opened: {e}")
+
+    # Fall back to URL only if non-empty
+    if isinstance(LOGO_URL, str) and LOGO_URL.strip():
+        st.image(LOGO_URL.strip(), width=200)
+        return
+
+    # Final fallback: show text instead of crashing
+    st.markdown("### ⚡ SPARK")
+
+render_logo()
 COLORS = {
     'primary': '#11A4E4',
     'secondary': '#0C77BD',
